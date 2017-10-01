@@ -1,0 +1,559 @@
+#wrapper{
+  overflow-x: hidden;  
+}
+
+
+/*
+ * Custom styles
+ */
+.fixed-theme {
+  position: fixed;
+  top: 0px;
+	border-bottom: 1px solid #9a9a9a;
+	box-shadow: 0 5px 20px -1px #9a9a9a;
+  z-index: 1;
+  width: 100%;  
+}
+
+.navbar-nav.mr-auto{
+  width: 100%;
+  justify-content: space-evenly;
+}
+.nav-item{
+  width: 130px;
+  text-align: -webkit-center;
+}
+
+.nav-item img {
+  width: 60px;
+  height: 60px;
+  margin-top: 1.6px;
+  margin-bottom: -17px;
+}
+.left_margin{
+  margin-left: auto;
+}
+.top_padding{
+  padding-top: 8px;  
+}
+.right_margin{
+  margin-right: auto;
+}
+.category_header{
+    text-align: -webkit-center;
+    padding: 17px;
+    margin-bottom: -23px;
+}
+/* Home Section */
+#home{
+    height: 680px;
+    background-color: #fafafa; 
+}
+#dgsm_carousel{
+  height: 680px;
+}  
+.carousel-item img {
+  height: 680px;
+}
+/* Functions Section */
+#functions{
+  height: 680px;  
+  background-color: #fafafa;
+  padding-top: 80px;  
+}
+.function_ul{
+  list-style: none;
+  margin-top: 0px;
+  width: 100%;
+  padding: 15px 10px 0px 22px;
+}
+.function_first{
+  margin-left: auto;
+}
+.function_third{
+  margin-right: auto;
+}
+.fa_div{
+  border: 1px solid #cccccc;
+  background-color: transparent;
+  height: 63px;
+  width: 63px; 
+  text-align: -webkit-center;
+  padding: 1px 8px 0px 7px;
+  transition: all 0.6s;
+  display: table;
+}
+.row.onHover{
+  height: 180px;  
+}
+.row.onHover .icon_div_wrapper{
+  height: 65px;
+}
+.row.onHover > div{
+  text-align: -webkit-center;  
+}
+.li_third_func{
+  height: 140px;
+}
+.function_ul .onHover:hover .fa_div{
+  transform: rotate(45deg);
+  border: 1px solid #f35757;
+}
+.fa_div fa{
+  font-size: 37px;
+}
+.function_ul .onHover:hover .fa_div fa{
+  transform: rotate(-45deg);
+  position: absolute;
+  margin: 0px 0px 0px -21px;
+  color: #f35757;
+}
+.function_ul .row .info{
+  padding: 0px;
+  height: stretch ;
+  padding-top: 10px;  
+}
+.info.eigth{
+  padding-top: 3px !important;  
+}
+.info.last{
+  padding-top: 15px !important;  
+}
+/* Department Section */
+#departments{
+    height: 650px;
+    background-color: #fff;   
+}
+#departments > div{
+  padding-top: 64px;
+}
+#departments > div > .row{
+  padding-top: 0px;
+}
+#departments div .row .card_first_div{
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrap-card {
+  position: relative;
+  box-shadow: 0px 0px 0px #818181;
+  transition: all 0.2s ease 0s;
+  -webkit-transform: translateY(0px) translateX(0px);
+  margin-top: 48px;
+}
+.wrap-card:before,
+.wrap-card:after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 3px;
+  background: #818181;
+  -webkit-transform: scaleX(0);
+  transition: all 0.2s ease;
+}
+.wrap-card:before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+}
+.wrap-card:after {
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 100% 0;
+}
+.wrap-card:hover {
+  box-shadow: 20px 20px 0px #818181;
+  -webkit-transform: translateY(-10px) translateX(-10px);
+  transition: all 0.2s ease 0.4s;
+}
+.wrap-card:hover:after,
+.wrap-card:hover:before {
+  -webkit-transform: scaleX(1);
+}
+.card_custom {
+  background: #ffffff;
+  padding: 30px 35px 45px 35px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(129, 129, 129, 0.1);
+  height: 435px;
+}
+.card_custom:before,
+.card_custom:after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  height: 100%;
+  background: #818181;
+  -webkit-transform: scaleY(0);
+  transition: all 0.2s ease 0.2s;
+}
+.card_custom:before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 0 100%;
+}
+.card_custom:after {
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: 0 0;
+}
+.card_custom:hover:after,
+.card_custom:hover:before {
+  -webkit-transform: scaleY(1);
+}
+.text-detail{
+  padding: 20px 20px 0px 20px;    
+}
+
+/* Geoscientific Section */
+#geoscientific_info{
+    height: 690px;
+    background-color: #fafafa;
+    padding-top: 64px;  
+}
+#geoscientific_info .container-fluid .category_header  {
+    margin-bottom: 212px !important;    
+}
+.geo_first{
+  margin-left: auto;
+}
+.geo_last{
+  margin-right: auto;
+}
+.services {
+	margin: 40px 0;
+}
+.service {
+	width: 90%;
+	height: 230px;
+	margin: 7px 0;
+	text-align: center;
+	border: 1px solid #ddd;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.service .icon-holder {
+  position: relative;
+  top: 70px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: white;
+  transition: all 0.3s ease;
+  border:1px solid transparent;
+}
+
+.service .heading {
+	position: relative;
+	top: 80px;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service .icon-holder > img.icon {
+	width: 40px;
+}
+
+.service:hover {
+	border-color: #f35757;
+}
+
+.service:hover .icon-holder {
+  top: -23px !important;
+  border-color: #f35757;
+}
+
+.service:hover .heading {
+	top: -30px !important;
+}
+
+.service .description {
+	width: 80%;
+	margin: 0 auto;
+	opacity: 0;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+
+.service:hover .description {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+.light {
+	font-weight: 300;
+}
+.muted {
+	color: #989da0;
+}
+/* Map Section */
+#map{
+  /*height: 500px;*/
+  background-color: #fff; 
+  padding-top: 60px;
+  text-align: -webkit-center;  
+}
+.map_heading{
+  margin-bottom: 10px;  
+}
+.actual_map{
+  display: -webkit-inline-box;  
+  height: 500px;
+}
+/* Loading overlay */
+.loading-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: #1d1d1d;
+}
+/*spinner*/
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 300px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  background-color: red;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; 
+}
+.sk-cube-grid .sk-cube2 {
+  background-color: black;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; 
+}
+.sk-cube-grid .sk-cube3 {
+  background-color: yellow;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.sk-cube-grid .sk-cube4 {
+  background-color: yellow;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; 
+}
+.sk-cube-grid .sk-cube5 {
+  background-color: red;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; 
+}
+.sk-cube-grid .sk-cube6 {
+  background-color: black;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; 
+}
+.sk-cube-grid .sk-cube7 {
+  background-color: black;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; 
+}
+.sk-cube-grid .sk-cube8 {
+  background-color: yellow;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; 
+}
+.sk-cube-grid .sk-cube9 {
+  background-color: red;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; 
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+/* Contact Us Section */
+footer {
+	background: url('../assets/images/world_Map_2.jpg');
+	-webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+footer > .cover{
+  background-color: rgba(0, 0, 0, 0.61);  
+  padding: 14px 0px 0px 0px;
+}
+
+.footer_info_cols{
+  margin-top: 39px;  
+}
+
+footer .open-blink {
+	content: ' ';
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 20px;
+	border-radius: 50%;
+	background-color: yellow;
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.blink_wrapper{
+  position: absolute;
+  margin-top: 111px;
+  margin-left: 40px;  
+}
+
+footer .open-blink:before {
+	content: ' ';
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	opacity: 0.1;
+	border-radius: 50%;
+	background-color: yellow;
+}
+
+footer .opening-hours {
+	margin-top: 60px;
+}
+
+footer .bottom-footer {
+  margin-top: 20px;
+  width: 100%;
+  padding-left: 11px;
+  margin-left: 0px;  
+}
+
+footer .social-footer {
+	padding: 0;
+	list-style: none;
+}
+
+footer .social-footer li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+footer .social-footer li a {
+	font-size: 24px;
+	color: #fff;
+}
+
+footer .social-footer li:hover a {
+	color: #00a8ff;
+}
+.contact-info-box{
+	font-size:15px;
+	margin:0 0 14px 68px;
+	padding-left:0;
+}
+.contact-info-box h3{
+	font-size: 15px;
+	font-weight:400;
+	float:left;
+	width:102px;
+	margin-right:12px;
+	line-height:28px;
+}
+.contact-info-box h3 i{
+	font-style:normal;
+	font-size:18px;
+	color:#222222;
+	font-family: 'FontAwesome';
+	font-weight:normal;
+	margin-right:7px;
+}
+.contact-info-box span{
+	line-height:28px;
+	display:block;
+	overflow:hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.social-link{
+	padding:35px 0;
+	margin:0 0 0 68px;
+	display:block;
+	overflow:hidden;
+	list-style:none;
+}
+.social-link li{
+	float:left;
+	margin-right:8px;
+}
+.social-link li a{
+	display:block;
+	width:50px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	font-size:25px;
+	color:#fff;
+	background:#222222;
+	border-radius:50%;
+	transition:all 0.3s ease-in-out;
+}
+.social-link li a:hover, .social-link li a:focus{
+	text-decoration:none;
+}
+.twitter a:hover {
+	background: #55acee;
+}
+.facebook a:hover {
+	background: #3b5998;
+}
+.pinterest a:hover {
+	background: #cb2026;
+}
+.gplus a:hover {
+	background: #dd4b39;
+}
+.dribbble a:hover {
+	background: #ea4c89;
+}
