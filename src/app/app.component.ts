@@ -11,10 +11,12 @@ declare var $ :any;
 export class AppComponent {
   target = '#test';
   setVisibility = 'display:none';
-  sidebarOverlay = $(document).height();
+  sidebarOverlayHeight = 0;
+  
   ngOnInit(){
+    this.sidebarOverlayHeight = $(document).height();
     //Set sidebar overlay visibility
-    $(".sidebar_overlary").css("display","none").css("height",this.sidebarOverlay);
+    $(".sidebar_overlary").css("display","none").css("height",this.sidebarOverlayHeight);
     // Loading Elements
     $(".loading-overlay .sk-cube-grid").fadeOut(2000, function () {
         // Show The Scroll
@@ -46,8 +48,8 @@ export class AppComponent {
       $("#wrapper").toggleClass("toggled");
       $(".sidebar_overlary").css("display","block");
       //Capture the current height...
-      this.sidebarOverlay = $(document).height();
-      $(".sidebar_overlary").css("height",this.sidebarOverlay);
+      this.sidebarOverlayHeight = $(document).height();
+      $(".sidebar_overlary").css("height",this.sidebarOverlayHeight);
   };  
 
   _closeSidebar(){
