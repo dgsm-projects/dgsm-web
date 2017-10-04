@@ -305,6 +305,7 @@
 .actual_map{
   display: -webkit-inline-box;  
   height: 500px;
+  padding: 0px;
 }
 /* Loading overlay */
 .loading-overlay {

@@ -10,8 +10,11 @@ declare var $ :any;
 })
 export class AppComponent {
   target = '#test';
+  setVisibility = 'display:none';
 
   ngOnInit(){
+    //Set sidebar overlay visibility
+    $(".sidebar_overlary").css("display","none").css("height",$(document).height());
     // Loading Elements
     $(".loading-overlay .sk-cube-grid").fadeOut(2000, function () {
         // Show The Scroll
@@ -41,7 +44,14 @@ export class AppComponent {
   _menuToggle($event){
       event.preventDefault();
       $("#wrapper").toggleClass("toggled");
+      $(".sidebar_overlary").css("display","block");
   };  
+
+  _closeSidebar(){
+    console.log("sidebar Close");
+      $("#wrapper").toggleClass("toggled");
+      $(".sidebar_overlary").css("display","none");    
+  }
 
   _onMouceScroll(){
     console.log("pressed");
