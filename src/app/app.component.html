@@ -1,27 +1,25 @@
-<div id="wrapper" >
+<div id="wrapper">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
+        <fa class="sidebar_fa_dismiss pull-right" name="bars" (click)="_closeSidebar()"></fa>
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
               <img class="sidebar_logo" src="assets/images/logo_2.jpg" alt="">
             </li>
             <li>
-                <a href="#header"><fa class="sidebar_fa" name="home"></fa><span class="sidebar_labels sidebar_labels_home">Home</span></a> <!--animation="spin" -->
+                <a href="#header" (click)="_navSwitch('home')"><fa class="sidebar_fa" name="home"></fa><span class="sidebar_labels sidebar_labels_home">Home</span></a> <!--animation="spin" -->
+            </li>          
+            <li>
+                <a href="#departments" (click)="_navSwitch('departments')"><fa class="sidebar_fa" name="users"></fa><span class="sidebar_labels">Departments</span></a>
             </li>
             <li>
-                <a href="#functions"><fa class="sidebar_fa" name="line-chart"></fa><span class="sidebar_labels">Functions</span></a>
-            </li>              
-            <li>
-                <a href="#departments"><fa class="sidebar_fa" name="diamond"></fa><span class="sidebar_labels">Departments</span></a>
+                <a href="#geoscientific_info" (click)="_navSwitch('geo')"><fa class="sidebar_fa" name="file-text-o"></fa><span class="sidebar_labels">Geoscientific Information</span></a>
             </li>
             <li>
-                <a href="#geoscientific_info"><fa class="sidebar_fa" name="diamond"></fa><span class="sidebar_labels">Geoscientific</span></a>
-            </li>
-            <li>
-                <a href="#map"><fa class="sidebar_fa" name="diamond"></fa><span class="sidebar_labels">Map</span></a>
+                <a href="#map" (click)="_navSwitch('map')"><fa class="sidebar_fa" name="street-view"></fa><span class="sidebar_labels">Mineral Maps</span></a>
             </li>                  
             <li>
-                <a href="#contactUs"><fa class="sidebar_fa" name="diamond"></fa><span class="sidebar_labels">Contact us</span></a>
+                <a href="#contactUs" (click)="_navSwitch('contact')"><fa class="sidebar_fa" name="volume-control-phone"></fa><span class="sidebar_labels">Contact us</span></a>
             </li>
         </ul>
     </div>
@@ -31,243 +29,180 @@
     <!-- Page Content -->
     <!-- Home Section -->  
     <header class="header" id="header"><!--header-start-->
-      <div class="container">
-        <figure class="logo animated fadeInDown delay-07s">
-            <a href="#"><img class="main_logo" src="assets/images/logo_2.jpg" alt=""></a>	
-        </figure>	
-        <h1 class="animated fadeInDown delay-07s">Directorate Of Geological Survey and Mines</h1>
-        <ul class="we-create animated fadeInUp delay-1s">
-          <li>A model of excellence in sustainable management and utilization of mineral resources.</li>
-        </ul>
-        <a class="mouse-icon margin-20 caller_link" (click)="_onMouceScroll()" [href]="target">
-          <div class="scroll"></div>
-        </a>            
+      <div class="container-fluid">
+        <div id="header_overlay">
+          <h1 id="dgsm_main" class="animated fadeInDown delay-07s">Directorate Of Geological Survey and Mines</h1>
+          <ul class="we-create animated fadeInUp delay-1s">
+            <li>A model of excellence in sustainable management and utilization of mineral resources.</li>
+          </ul>
+        </div>     
       </div>
     </header><!--header-end-->
     <nav class="main-nav-outer bg-dark" id="test"><!--main-nav-start-->
       <div class="container-fluid">
             <ul class="main-nav">
-              <li><a href="#header" class="home_btn">Home</a></li>
-                <li><a href="#functions" class="function_btn">Functions</a></li>
-                <li><a href="#departments" class="department_btn">Departments</a></li>
-                <li class="small-logo" class="logo_btn"><a href="#header"><img class="small_logo" src="assets/images/logo_2.jpg" alt=""></a></li>
-                <li><a href="#geoscientific_info" class="geo_btn">Geoscientific</a></li>
-                <li><a href="#map" class="map_btn">Map</a></li>
-                <li><a href="#contactUs" class="contact_btn">Contact</a></li>
+              <li><a href="#header" class="home_btn" (click)="_navSwitch('home')">Home</a></li>
+              <li><a href="#departments" class="department_btn" (click)="_navSwitch('departments')">Departments</a></li>
+              <!--<li class="small-logo" class="logo_btn"><a href="#header"><img class="small_logo" src="assets/images/logo_2.jpg" alt=""></a></li>-->
+              <li><a href="#geoscientific_info" class="geo_btn" (click)="_navSwitch('geo')">Geoscientific Information</a></li>
+              <li><a href="#map" class="map_btn" (click)="_navSwitch('map')">Mineral Maps</a></li>
+              <li><a href="#contactUs" class="contact_btn" (click)="_navSwitch('contact')">Contact</a></li>
             </ul>            
-            <a class="res-nav_click" (click)="_menuToggle($event)"><fa name="bars"></fa></a>
+            <a class="res-nav_click pull-left" (click)="_menuToggle($event)"><fa name="bars"></fa></a>
             <span class="pull-right res-nav-name">Directorate of Geological Survey and Mines</span>
         </div>
-    </nav><!--main-nav-end-->          
-    <!-- Functions Section -->
-    <section id="functions" class="m-100 mw-100">
-      <div class="category_header wow fadeInDown delay-01s"><h1>Functions</h1></div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 function_first">
-          <ul class="function_ul">
-            <li class="row onHover wow fadeInRight delay-02s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Attract investment in the country’s mineral sector</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-04s li_third_func">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Mineral Exploration and Development</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-08s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Institution Development and Capacity building</div>
-            </li>                                    
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 function_second">
-          <ul class="function_ul">
-            <li class="row onHover wow fadeInRight delay-02s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Policy formulation and Regulation</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-04s li_third_func">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Licensing and Inspection</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-08s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Earthquake monitoring and advisory services</div>
-            </li>                                    
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 function_third">
-          <ul class="function_ul">
-            <li class="row onHover wow fadeInRight delay-02s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info eigth col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Acquire and disseminate information on, mining, geotechnical, geological, geophysical investigations and mineral statistics</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-04s li_third_func">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Geoscience Laboratory services</div>
-            </li>
-            <li class="row onHover wow fadeInRight delay-08s">
-              <div class="icon_div_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="fa_div"><fa name="money"></fa></div>
-              </div>
-              <div class="info last col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Develop the geothermal Energy potential of Uganda</div>
-            </li>                                    
-          </ul>
-        </div>                            
-      </div>  
-    </section>         
-    <!-- Departments Section -->
-    <section id="departments">
-      <div class="container">
-        <div class="category_header wow fadeInDown delay-01s"><h1>Departments</h1></div>
+    </nav><!--main-nav-end-->
+    <div [ngSwitch]="switchValue" class="sections_wrapper"> 
+      <!-- Functions Section -->
+      <section id="functions" class="m-100 mw-100 section" *ngSwitchCase="'home'">
+        <div class="category_header wow fadeInDown delay-01s"><h4>Functions Of DGSM</h4></div>
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card_first_div wow fadeInLeft delay-04s">
-            <div class="wrap-card">
-              <div class="card_custom">
-                <img class="card-img-top" src="assets/images/3.jpg" alt="Card image cap">
-                <div class="text-detail">
-                  <p class="card-text text-justify">
-                    Geological Survey Department ( Geology Division, Geophysics division, Geodatadivision, Laboratory division)
-                  </p>
-                </div>
-              </div>
-            </div>                      
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 wow fadeIn delay-04s">
-            <div class="wrap-card">
-              <div class="card_custom">
-                <img class="card-img-top" src="assets/images/3.jpg" alt="Card image cap">
-                <div class="text-detail">
-                  <p class="card-text text-justify">
-                    Mines Department ( Licensing and Administration division, Monitoring and Inspection division, Geoscience division )
-                  </p>
-                </div>
-              </div>
-            </div>                      
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 card_third_div wow fadeInRight delay-04s">
-            <div class="wrap-card">
-              <div class="card_custom">
-                <img class="card-img-top" src="assets/images/3.jpg" alt="Card image cap">
-                <div class="text-detail">
-                  <p class="card-text text-justify">
-                    Geothermal Resource Department (Geology Division)
-                  </p>
-                </div>
-              </div>
-            </div>                      
-          </div>                                          
-        </div>
-      </div>    
-    </section>   
-    <!-- Geoscientific Information Section-->
-    <section id="geoscientific_info">
-      <div class="container">
-        <div class="category_header wow fadeInDown delay-01s"><h1>Geoscientific Information</h1></div>
-        <div class="row services">
-          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-            <div class="service">
-              <div class="icon-holder">
-                <fa name="link" size="lg"></fa>
-              </div>
-              <h4 class="heading">Mining Act</h4>
-              <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
-            <div class="service">
-              <div class="icon-holder">
-                <fa name="link" size="lg"></fa>
-              </div>
-              <h4 class="heading">Mining Regulations</h4>
-              <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-            <div class="service">
-              <div class="icon-holder">
-                <fa name="link" size="lg"></fa>
-              </div>
-              <h4 class="heading">Mineral Policy</h4>
-              <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-            <div class="service">
-              <div class="icon-holder">
-                <fa name="link" size="lg"></fa>
-              </div>
-              <h4 class="heading">Mineral concession and occurrence map</h4>
-              <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
-            <div class="service">
-              <div class="icon-holder">
-                <fa name="link" size="lg"></fa>
-              </div>
-              <h4 class="heading">Mining Cadastre</h4>
-              <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-            </div>
-          </div>                            
-        </div>
-      </div>
-      <div class="cut cut-bottom"></div>
-    </section>            
-    <!-- Map Section -->    
-    <section id="map">
-      <div class="container-fluid">
-        <div class="map_heading category_header wow fadeInDown delay-01s"><h1>Map</h1></div>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 wow fadeInUp delay-04s actual_map">
-            <div class="embed-responsive embed-responsive-1by1">
-              <iframe 
-                class="embed-responsive-item" 
-                height="600" 
-                frameborder="0" 
-                style="border:0" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9486.521541803044!2d32.47512708170844!3d0.05523665286863108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d868fc7d6ce29%3A0xf0b754352428061c!2sDirectorate+Of+Geological+Surveys+And+Mines!5e0!3m2!1sen!2s!4v1506767200920"
-                allowfullscreen>
-              </iframe>
-            </div>            
-          </div>   
-        </div> 
-      </div>       
-    </section>                        
-    <section class="loading-overlay">
-      <div class="sk-cube-grid">
-          <div class="sk-cube sk-cube1"></div>
-          <div class="sk-cube sk-cube2"></div>
-          <div class="sk-cube sk-cube3"></div>
-          <div class="sk-cube sk-cube4"></div>
-          <div class="sk-cube sk-cube5"></div>
-          <div class="sk-cube sk-cube6"></div>
-          <div class="sk-cube sk-cube7"></div>
-          <div class="sk-cube sk-cube8"></div>
-          <div class="sk-cube sk-cube9"></div>
-      </div>
-    </section>  
-    <!-- Contact Us Section --> 
-    <footer id="contactUs">
-      <div class="cover">
-        <div class="container">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 function_first">
+            <ul class="function_ul">
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Attract investment in the country’s mineral sector</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Mineral Exploration and Development</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Institution Development and Capacity building</div>
+              </li>   
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Policy formulation and Regulation</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Licensing and Inspection</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Earthquake monitoring and advisory services</div>
+              </li> 
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Acquire and disseminate information on, mining, geotechnical, geological, geophysical investigations and mineral statistics</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left second_last">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Geoscience Laboratory services</div>
+              </li>
+              <li class="row onHover wow fadeInRight delay-02s col-lg-6 col-md-12 col-sm-12 pull-left last">
+                <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <div class="info">Develop the geothermal Energy potential of Uganda</div>
+              </li>                                                           
+            </ul>
+          </div>                          
+        </div>  
+      </section>         
+      <!-- Departments Section -->
+      <section id="departments" class="m-100 mw-100 section" *ngSwitchCase="'departments'">
+        <div class="container-fluid">
+          <div class="category_header wow fadeInDown delay-01s"><h4>Departments</h4></div>
           <div class="row">
-            <div class="footer_info_cols col-lg-6 col-md-6  col-sm-12 wow fadeInLeft delay-02s">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 function_first">
+              <ul class="function_ul">
+                <li class="row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
+                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                  <div class="info">Geological Survey Department ( Geology Division, Geophysics division, Geodatadivision, Laboratory division)</div>
+                </li>
+                <li class="depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
+                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                  <div class="info">Mines Department ( Licensing and Administration division, Monitoring and Inspection division, Geoscience division )</div>
+                </li>
+                <li class="depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
+                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                  <div class="info">Geothermal Resource Department (Geology Division)</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>  
+      <!-- Geoscientific Information Section-->
+      <section id="geoscientific_info" class="m-100 mw-100 section" *ngSwitchCase="'geo'">
+        <div class="container">
+          <div class="category_header wow fadeInDown delay-01s"><h4>Geoscientific Information</h4></div>
+          <div class="row services">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
+              <div class="service">
+                <div class="icon-holder">
+                  <fa name="link" size="lg"></fa>
+                </div>
+                <h4 class="heading">Mining Act</h4>
+                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
+              <div class="service">
+                <div class="icon-holder">
+                  <fa name="link" size="lg"></fa>
+                </div>
+                <h4 class="heading">Mining Regulations</h4>
+                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
+              <div class="service">
+                <div class="icon-holder">
+                  <fa name="link" size="lg"></fa>
+                </div>
+                <h4 class="heading">Mineral Policy</h4>
+                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
+              <div class="service">
+                <div class="icon-holder">
+                  <fa name="link" size="lg"></fa>
+                </div>
+                <h4 class="heading">Mineral concession and occurrence map</h4>
+                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+              </div>
+            </div>
+            <!--
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
+              <div class="service">
+                <div class="icon-holder">
+                  <fa name="link" size="lg"></fa>
+                </div>
+                <h4 class="heading">Mining Cadastre</h4>
+                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+              </div>
+            </div> -->                           
+          </div>
+        </div>
+      </section>            
+      <!-- Map Section -->
+      <section id="map" class="m-100 mw-100 section" *ngSwitchCase="'map'">
+        <div class="container-fluid">
+          <div class="map_heading category_header wow fadeInDown delay-01s"><a href="http://portals.flexicadastre.com/uganda/" target="_blank" title="Visit the link"><h4>Mineral Occurance Map</h4></a></div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 wow fadeInRight delay-04s actual_map">
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe 
+                  class="embed-responsive-item" 
+                  height="600" 
+                  frameborder="0" 
+                  style="border:0" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9486.521541803044!2d32.47512708170844!3d0.05523665286863108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d868fc7d6ce29%3A0xf0b754352428061c!2sDirectorate+Of+Geological+Surveys+And+Mines!5e0!3m2!1sen!2s!4v1506767200920"
+                  allowfullscreen>
+                </iframe>
+              </div>            
+            </div>   
+          </div> 
+        </div>       
+      </section>
+      <!-- Contact Information Section-->
+      <section id="contact" class="m-100 mw-100 section" *ngSwitchCase="'contact'">
+        <div class="container">
+          <div class="category_header wow fadeInDown delay-01s"><h4>Contact Information</h4></div>
+          <div class="row">
+            <div class="contact_info_cols col-lg-6 col-md-6  col-sm-12 wow fadeInLeft delay-02s">
               <div class="contact-info-box address clearfix">
                 <h3><fa name="map-marker"></fa>Address:</h3>
                 <span>Directorate of Geological Survey and Mines<br />Department of Mines<br />Plot 21 -29, Johnstone Road</span>
@@ -284,15 +219,8 @@
                 <h3><fa name="pencil"></fa>email:</h3>
                 <span><a href="mailto:dgsm@minerals.go.ug" title="Write to us">dgsm@minerals.go.ug</a></span>
               </div>
-              <ul class="social-link">
-                <li class="twitter" data-toggle="tooltip" data-placement="bottom" title="Follow us on Twitter"><a><fa name="twitter"></fa></a></li>
-                <li class="facebook"><a><fa name="facebook"></fa></a></li>
-                <li class="pinterest"><a><fa name="pinterest"></fa></a></li>
-                <li class="gplus"><a><fa name="google-plus"></fa></a></li>
-                <li class="dribbble"><a><fa name="dribbble"></fa></a></li>
-              </ul>
             </div>            
-            <div class="footer_info_cols col-md-6 col-sm-12 text-center-mobile wow fadeInRight delay-02s">
+            <div class="contact_info_cols col-md-6 col-sm-12 text-center-mobile wow fadeInRight delay-02s">
               <h3 class="white">Opening Hours <span class="open-blink"></span></h3>               
               <div class="row opening-hours">
                 <div class="col-sm-6 text-center-mobile">
@@ -302,18 +230,47 @@
                 <div class="col-sm-6 text-center-mobile">
                   <h5 class="light-white light">Sat - Sun</h5>
                   <h3 class="regular white">10:00 - 15:00</h3>
-                </div>                  
+                </div>
+                <ul class="social-link">
+                  <li class="twitter" data-toggle="tooltip" data-placement="bottom" title="Follow us on Twitter"><a><fa name="twitter"></fa></a></li>
+                  <li class="facebook"><a><fa name="facebook"></fa></a></li>
+                  <li class="pinterest"><a><fa name="pinterest"></fa></a></li>
+                  <li class="gplus"><a><fa name="google-plus"></fa></a></li>
+                  <li class="dribbble"><a><fa name="dribbble"></fa></a></li>
+                </ul>                                  
               </div>
-            </div>
-          <div class="row bottom-footer text-center-mobile text-center">
-            <div class="col-lg-12 col-sm-12">
-              <p>&copy; 2017 All Rights Reserved. Powered by <a href="mailto:kindsolutionsltd@gmail.com">Kindsolutions</a> exclusively for <a href="#header" class="caller_link">GDSM</a></p>
+            </div>                          
+          </div>
+        </div>
+      </section>               
+    </div>               
+    <section class="loading-overlay">
+      <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
+      </div>
+    </section>  
+    <!-- Contact Us Section -->
+    <footer>
+      <div class="cover">
+        <div class="container">
+          <div class="row">
+            <div class="row bottom-footer text-center-mobile text-center">
+              <div class="col-lg-12 col-sm-12">
+                <p>&copy; 2017 All Rights Reserved. Powered by <a href="mailto:kindsolutionsltd@gmail.com">Kindsolutions</a> exclusively for <a href="#header" class="caller_link">DGSM</a></p>
+              </div>
             </div>
           </div>
         </div>
-        </div>
     </div>
-    </footer>        
+    </footer>      
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->  

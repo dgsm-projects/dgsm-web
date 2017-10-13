@@ -1,8 +1,3 @@
-#wrapper{
-  overflow-x: hidden;  
-}
-
-
 /*
  * Custom styles
  */
@@ -40,10 +35,11 @@
   margin-right: auto;
 }
 .category_header{
-    text-align: -webkit-center;
-    padding: 17px;
+    text-align: left;
+    padding: 15px 0px 15px 44px;
     margin-bottom: -23px;
 }
+
 /* Home Section */
 #home{
     height: 680px;
@@ -57,15 +53,15 @@
 }
 /* Functions Section */
 #functions{
-  height: 680px;  
-  background-color: #fafafa;
-  padding-top: 80px;  
+  height: 100%;  
+  padding-top: 0px;  
 }
 .function_ul{
   list-style: none;
   margin-top: 0px;
   width: 100%;
-  padding: 15px 10px 0px 22px;
+  padding: 15px 10px 0px 30px;
+  transition: all 0.6s;
 }
 .function_first{
   margin-left: auto;
@@ -73,59 +69,98 @@
 .function_third{
   margin-right: auto;
 }
+.icon_div_wrapper{
+  width: 31px;
+  position: absolute;
+  height: 100%;
+}
 .fa_div{
-  border: 1px solid #cccccc;
+  margin-top: 10px;
+  margin-left: -29px;
+  margin-right: 35px;
   background-color: transparent;
-  height: 63px;
-  width: 63px; 
   text-align: -webkit-center;
-  padding: 1px 8px 0px 7px;
-  transition: all 0.6s;
-  display: table;
+  font-weight: lighter;
+  color: white;
+  opacity: .85;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  height: 3px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.last{
+  margin-top: 28px;
+}
+@media(max-width: 993px){
+  #wrapper{
+    width: 100% !important;
+  }  
+  .header > div{
+    padding: 68px 0px 0px !important;
+  }    
+  .last{
+    margin-top: 0px !important;
+  }
+  .row.onHover{
+    height: 80px !important;
+  }
+  .sections_wrapper{
+    height: 100% !important;
+    display: inline-block;
+    width: 100%;
+  }
+  #functions, #departments > div, #geoscientific_info, #map {
+      padding-top: 1px !important;
+  }  
+  footer{
+    margin-top: -6px;    
+  }
+  #contact{
+    margin-bottom: 6px;    
+  }
 }
 .row.onHover{
-  height: 180px;  
-}
-.row.onHover .icon_div_wrapper{
-  height: 65px;
+  margin-bottom: 15px;
+  height: 40px;  
+  margin-left: auto;  
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 .row.onHover > div{
-  text-align: -webkit-center;  
+  text-align: -webkit-left;  
 }
-.li_third_func{
-  height: 140px;
+.info{
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);  
 }
 .function_ul .onHover:hover .fa_div{
-  transform: rotate(45deg);
+  margin-left: -1px;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
   border: 1px solid #f35757;
+  background-color: #f35757;
+  margin-right: 0px;
 }
-.fa_div fa{
-  font-size: 37px;
-}
-.function_ul .onHover:hover .fa_div fa{
-  transform: rotate(-45deg);
-  position: absolute;
-  margin: 0px 0px 0px -21px;
-  color: #f35757;
+.function_ul .onHover:hover .info{
+  margin-left: 40px;
 }
 .function_ul .row .info{
   padding: 0px;
   height: stretch ;
-  padding-top: 10px;  
-}
-.info.eigth{
-  padding-top: 3px !important;  
-}
-.info.last{
-  padding-top: 15px !important;  
+  padding-top: 1px;
+  width: 100%;  
 }
 /* Department Section */
 #departments{
-    height: 650px;
-    background-color: #fff;   
+    height: 100%;
 }
 #departments > div{
-  padding-top: 64px;
+  /*padding-top: 64px;*/
 }
 #departments > div > .row{
   padding-top: 0px;
@@ -209,12 +244,12 @@
 
 /* Geoscientific Section */
 #geoscientific_info{
-    height: 690px;
-    background-color: #fafafa;
-    padding-top: 64px;  
+    height: 100%;
+    overflow-y: auto;    
 }
-#geoscientific_info .container-fluid .category_header  {
-    margin-bottom: 212px !important;    
+
+#geoscientific_info > div {
+    height: 100%;   
 }
 .geo_first{
   margin-left: auto;
@@ -223,11 +258,15 @@
   margin-right: auto;
 }
 .services {
-	margin: 40px 0;
+  margin: 10px 0;
+  height: 100%;
+  text-align: -webkit-center;
 }
 .service {
-	width: 90%;
-	height: 230px;
+	/*width: 90%;
+  height: 230px;*/
+  width: 90%;
+  height: 200px;  
 	margin: 7px 0;
 	text-align: center;
 	border: 1px solid #ddd;
@@ -236,7 +275,7 @@
 }
 .service .icon-holder {
   position: relative;
-  top: 70px;
+  top: 40px;
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px;
@@ -247,7 +286,7 @@
 
 .service .heading {
 	position: relative;
-	top: 80px;
+	top: 30px;
 	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -270,7 +309,9 @@
 }
 
 .service .description {
-	width: 80%;
+  width: 100%;
+  padding: 0px 10px;
+  text-align: justify;
 	margin: 0 auto;
 	opacity: 0;
 	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -284,7 +325,8 @@
 	opacity: 1;
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
-	transform: scale(1);
+  transform: scale(1);
+  margin-top: -26px;
 }
 .light {
 	font-weight: 300;
@@ -294,19 +336,84 @@
 }
 /* Map Section */
 #map{
-  /*height: 500px;*/
-  background-color: #fff; 
-  padding-top: 60px;
+  height: 100%;
   text-align: -webkit-center;  
 }
+#map > div,
+#contact > div{
+  padding: 0px;
+  height: 100%;
+}
 .map_heading{
-  margin-bottom: 10px;  
+  margin-bottom: -6px;  
+}
+#map > div > .row{
+  height: 87.5%;
+  margin: 0px;
 }
 .actual_map{
   display: -webkit-inline-box;  
-  height: 500px;
+  height: 100%;
   padding: 0px;
 }
+
+/* Contact Section */
+#contact{
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.91);
+  color: white;
+}
+#contact > div > .row{
+  margin: 0px;
+}
+.contact-info-box{
+	font-size:15px;
+	margin:0 0 14px 68px;
+	padding-left:0;
+}
+.contact-info-box h3{
+	font-size: 15px;
+	font-weight:400;
+	float:left;
+	width:102px;
+	margin-right:12px;
+	line-height:28px;
+}
+.contact-info-box h3 i{
+	font-style:normal;
+	font-size:18px;
+	color:#222222;
+	font-family: 'FontAwesome';
+	font-weight:normal;
+	margin-right:7px;
+}
+.contact-info-box span{
+	line-height:28px;
+	display:block;
+  overflow:hidden;
+  text-align: -webkit-left;  
+}
+.contact_info_cols{
+  margin-top: 10px;  
+}
+
+#contact .open-blink {
+	content: ' ';
+	position: relative;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 20px;
+	border-radius: 50%;
+	background-color: yellow;
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
 /* Loading overlay */
 .loading-overlay {
     width: 100%;
@@ -396,37 +503,14 @@
             transform: scale3D(0, 0, 1);
   } 
 }
-/* Contact Us Section */
+/* Footer Section */
 footer {
-	background: url('../assets/images/world_Map_2.jpg');
-	-webkit-background-size: cover;
-  background-size: cover;
   color: white;
+  height: 100%;
 }
 footer > .cover{
   background-color: rgba(0, 0, 0, 0.61);  
-  padding: 14px 0px 0px 0px;
-}
-
-.footer_info_cols{
-  margin-top: 39px;  
-}
-
-footer .open-blink {
-	content: ' ';
-	position: relative;
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	margin: 0 20px;
-	border-radius: 50%;
-	background-color: yellow;
-	-webkit-animation-name: flash;
-	animation-name: flash;
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
+  padding: 0px 0px 0px 0px;
 }
 
 .blink_wrapper{
@@ -453,10 +537,15 @@ footer .opening-hours {
 }
 
 footer .bottom-footer {
-  margin-top: 20px;
+  margin-top: 0px;
   width: 100%;
   padding-left: 11px;
   margin-left: 0px;  
+}
+
+.bottom-footer > div > p{
+  margin-top: 10px;
+  margin-bottom: 10px;  
 }
 
 footer .social-footer {
@@ -476,32 +565,6 @@ footer .social-footer li a {
 
 footer .social-footer li:hover a {
 	color: #00a8ff;
-}
-.contact-info-box{
-	font-size:15px;
-	margin:0 0 14px 68px;
-	padding-left:0;
-}
-.contact-info-box h3{
-	font-size: 15px;
-	font-weight:400;
-	float:left;
-	width:102px;
-	margin-right:12px;
-	line-height:28px;
-}
-.contact-info-box h3 i{
-	font-style:normal;
-	font-size:18px;
-	color:#222222;
-	font-family: 'FontAwesome';
-	font-weight:normal;
-	margin-right:7px;
-}
-.contact-info-box span{
-	line-height:28px;
-	display:block;
-	overflow:hidden;
 }
 
 .clearfix:before,
