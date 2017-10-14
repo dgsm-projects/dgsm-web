@@ -1,7 +1,7 @@
 <div id="wrapper">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <fa class="sidebar_fa_dismiss pull-right" name="bars" (click)="_closeSidebar()"></fa>
+        <fa class="sidebar_fa_dismiss pull-right wow fadeInLeft delay-02s " name="bars" (click)="_closeSidebar()"></fa>
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
               <img class="sidebar_logo" src="assets/images/logo_2.jpg" alt="">
@@ -13,13 +13,13 @@
                 <a href="#departments" (click)="_navSwitch('departments')"><fa class="sidebar_fa" name="users"></fa><span class="sidebar_labels">Departments</span></a>
             </li>
             <li>
-                <a href="#geoscientific_info" (click)="_navSwitch('geo')"><fa class="sidebar_fa" name="file-text-o"></fa><span class="sidebar_labels">Geoscientific Information</span></a>
+                <a href="#geoscientific_info" (click)="_navSwitch('geo')"><fa class="sidebar_fa geo_fa" name="file-text-o"></fa><span class="sidebar_labels">Geoscientific Information</span></a>
             </li>
             <li>
-                <a href="#map" (click)="_navSwitch('map')"><fa class="sidebar_fa" name="street-view"></fa><span class="sidebar_labels">Mineral Maps</span></a>
+                <a href="#map" (click)="_navSwitch('map')"><fa class="sidebar_fa mineral_map_fa" name="street-view"></fa><span class="sidebar_labels">Mineral Maps</span></a>
             </li>                  
             <li>
-                <a href="#contactUs" (click)="_navSwitch('contact')"><fa class="sidebar_fa" name="volume-control-phone"></fa><span class="sidebar_labels">Contact us</span></a>
+                <a href="#contactUs" (click)="_navSwitch('contact')"><fa class="sidebar_fa contact_fa" name="volume-control-phone"></fa><span class="sidebar_labels">Contact us</span></a>
             </li>
         </ul>
     </div>
@@ -133,8 +133,8 @@
                 <div class="icon-holder">
                   <fa name="link" size="lg"></fa>
                 </div>
-                <h4 class="heading">Mining Act</h4>
-                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                <h4 class="heading">Mining Act 2003</h4>
+                <p class="description">An Act to repeal and replace the Mining Act, Cap. 248, with a new legislation on mining and mineral development, which conforms, and otherwise gives effect, to ...</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
@@ -143,7 +143,7 @@
                   <fa name="link" size="lg"></fa>
                 </div>
                 <h4 class="heading">Mining Regulations</h4>
-                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                <p class="description">In exercise of the powers conferred upon the Minister by section 121 of the Mining Act, 2003, these Regulations are made this 2nd day of September, 2004.</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
@@ -152,16 +152,16 @@
                   <fa name="link" size="lg"></fa>
                 </div>
                 <h4 class="heading">Mineral Policy</h4>
-                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                <p class="description">The Constitution of the Republic of Uganda places important natural resources including minerals under the protection of Government, on behalf of the people of Uganda.</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-              <div class="service">
+              <div class="service map_service">
                 <div class="icon-holder">
                   <fa name="link" size="lg"></fa>
                 </div>
-                <h4 class="heading">Mineral concession and occurrence map</h4>
-                <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                <h4 class="heading map_img">Mineral concession and occurrence map</h4>
+                <img class="service-img" title="Download Map" src="assets/images/mineral concessions and occurencies map_thumbnail.png" />
               </div>
             </div>
             <!--
@@ -173,10 +173,18 @@
                 <h4 class="heading">Mining Cadastre</h4>
                 <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
               </div>
-            </div> -->                           
+            </div> -->                                     
           </div>
-        </div>
-      </section>            
+        </div>  
+      </section>
+      <!--
+      <pdf-viewer [src]="pdfSrc" 
+                  [render-text]="true"
+                  style="display: block;"
+                  [render-text]="true"
+                  [external-link-target]="self"
+                  [stick-to-page]="true"
+      ></pdf-viewer>-->                 
       <!-- Map Section -->
       <section id="map" class="m-100 mw-100 section" *ngSwitchCase="'map'">
         <div class="container-fluid">
@@ -233,10 +241,8 @@
                 </div>
                 <ul class="social-link">
                   <li class="twitter" data-toggle="tooltip" data-placement="bottom" title="Follow us on Twitter"><a><fa name="twitter"></fa></a></li>
-                  <li class="facebook"><a><fa name="facebook"></fa></a></li>
-                  <li class="pinterest"><a><fa name="pinterest"></fa></a></li>
-                  <li class="gplus"><a><fa name="google-plus"></fa></a></li>
-                  <li class="dribbble"><a><fa name="dribbble"></fa></a></li>
+                  <li class="facebook"><a><fa name="facebook" title="Check us out on Facebook"></fa></a></li>
+                  <li class="gplus"><a><fa name="google-plus" title="Follow us on Google plus"></fa></a></li>
                 </ul>                                  
               </div>
             </div>                          

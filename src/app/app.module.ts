@@ -15,11 +15,16 @@ import {
   BsDropdownModule
 } from 'ngx-bootstrap/dropdown';
 
+import { PdfViewerComponent } from 'ng2-pdf-viewer';
+
 import { AppComponent } from './app.component';
+import { SafeHtmlPipePipe } from './safe-html-pipe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PdfViewerComponent,
+    SafeHtmlPipePipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { AppComponent } from './app.component';
     MdButtonModule,
     MatIconModule,
     AngularFontAwesomeModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

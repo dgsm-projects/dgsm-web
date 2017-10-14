@@ -263,8 +263,6 @@
   text-align: -webkit-center;
 }
 .service {
-	/*width: 90%;
-  height: 230px;*/
   width: 90%;
   height: 200px;  
 	margin: 7px 0;
@@ -272,6 +270,9 @@
 	border: 1px solid #ddd;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+}
+.map_service:hover{
+    height: 100% !important;  
 }
 .service .icon-holder {
   position: relative;
@@ -308,7 +309,16 @@
 	top: -30px !important;
 }
 
-.service .description {
+.service:hover .map_img {
+	font-size: 14px !important;
+}
+
+.service .service-img{
+  cursor: pointer;
+}
+
+.service .description,
+.service .service-img {
   width: 100%;
   padding: 0px 10px;
   text-align: justify;
@@ -321,7 +331,8 @@
 	transform: scale(0);
 }
 
-.service:hover .description {
+.service:hover .description,
+.service:hover .service-img {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
@@ -334,6 +345,7 @@
 .muted {
 	color: #989da0;
 }
+
 /* Map Section */
 #map{
   height: 100%;

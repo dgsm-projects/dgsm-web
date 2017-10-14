@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Sanitizer } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 declare var jquery:any;
 declare var $ :any;
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,10 @@ export class AppComponent {
   sidebarOverlayHeight = 0;
   switchValue = "home";
   sectionHeight = $(window).height()-350;
+  pdfSrc: string = 'assets/regulations/MINING_ACT_2003.pdf';
+  pdfUrl: String = "http://docs.google.com/gview?url="+this.pdfSrc+"&embedded=true"
+
+  constructor(private Sanitizer: DomSanitizer){}
 
   ngOnInit(){
     this.sidebarOverlayHeight = $(document).height();
@@ -94,5 +100,9 @@ export class AppComponent {
     console.log(activated);
     this.switchValue = activated;
   }
-  
+
+  _getEmbededPdf(){
+    return this.Sanitizer.bypassSecurityTrustHtml(this.pdfSrc)
+  }
+
 }
