@@ -39,28 +39,30 @@ export class AppComponent {
     this._onScroll(".sidebar-nav li a"); 
     this._onScroll(".caller_link");   
 
+      var width = $(window).width();
+
+      if(width <= 930){
+        console.log("small");
+        $(".last").removeClass("fadeInRight").show(1000);
+      }else{
+        $(".last").addClass("fadeInRight");
+      }  
+
     window.onscroll = function(e) {
       var width = $(window).width();
       var scrollPosition = window.pageYOffset;
 
       if(scrollPosition >= 779 || width <= 930){
+        console.log("small");
         $(".main-nav-outer").addClass("fixed-theme");
+        $(".last").removeClass("fadeInRight").show(1000);
       }else{
         $(".main-nav-outer").removeClass("fixed-theme");
+        console.log("bigger");
+        $(".last").addClass("fadeInRight");
       }  
     }  
-
-    var activeCase = this.switchValue;
-    console.log(activeCase);
-    window.setInterval(function(activeCase){
-      var newWidth = $(window).width();
-      if (this.switchValue == "home" && newWidth <= 993){
-        $(".sections_wrapper").css('height',828);
-        //console.log(this.switchValue);
-      }   
-    },1000);
   }
-
   _menuToggle($event){
       event.preventDefault();
       $("#wrapper").toggleClass("toggled");
