@@ -40,17 +40,17 @@
     </header><!--header-end-->
     <nav class="main-nav-outer bg-dark" id="test"><!--main-nav-start-->
       <div class="container-fluid">
-            <ul class="main-nav">
-              <li><a href="#header" class="home_btn" (click)="_navSwitch('home')">Home</a></li>
-              <li><a href="#departments" class="department_btn" (click)="_navSwitch('departments')">Departments</a></li>
-              <!--<li class="small-logo" class="logo_btn"><a href="#header"><img class="small_logo" src="assets/images/logo_2.jpg" alt=""></a></li>-->
-              <li><a href="#geoscientific_info" class="geo_btn" (click)="_navSwitch('geo')">Geoscientific Information</a></li>
-              <li><a href="#map" class="map_btn" (click)="_navSwitch('map')">Mineral Maps</a></li>
-              <li><a href="#contactUs" class="contact_btn" (click)="_navSwitch('contact')">Contact</a></li>
-            </ul>            
-            <a class="res-nav_click pull-left" (click)="_menuToggle($event)"><fa name="bars"></fa></a>
-            <span class="pull-right res-nav-name">Directorate of Geological Survey and Mines</span>
-        </div>
+        <ul class="main-nav">
+          <li><a href="#header" class="home_btn" (click)="_navSwitch('home')">Home</a></li>
+          <li><a href="#departments" class="department_btn" (click)="_navSwitch('departments')">Departments</a></li>
+          <!--<li class="small-logo" class="logo_btn"><a href="#header"><img class="small_logo" src="assets/images/logo_2.jpg" alt=""></a></li>-->
+          <li><a href="#geoscientific_info" class="geo_btn" (click)="_navSwitch('geo')">Geoscientific Information</a></li>
+          <li><a href="#map" class="map_btn" (click)="_navSwitch('map')">Mineral Maps</a></li>
+          <li><a href="#contactUs" class="contact_btn" (click)="_navSwitch('contact')">Contact</a></li>
+        </ul>            
+        <a class="res-nav_click pull-left" (click)="_menuToggle($event)"><fa name="bars"></fa></a>
+        <span class="pull-right res-nav-name">Directorate of Geological Survey and Mines</span>
+      </div>
     </nav><!--main-nav-end-->
     <div [ngSwitch]="switchValue" class="sections_wrapper"> 
       <!-- Functions Section -->
@@ -100,68 +100,76 @@
         </div>  
       </section>         
       <!-- Departments Section -->
-      <section id="departments" class="m-100 mw-100 section" *ngSwitchCase="'departments'">
+      <section id="departments" class="m-100 mw-100 section" *ngSwitchCase="'departments'">        
         <div class="container-fluid">
           <div class="category_header wow fadeInDown delay-01s"><h4>Departments</h4></div>
           <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 function_first">
               <ul class="function_ul">
-                <li class="row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
-                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
-                  <div class="info">Geological Survey Department ( Geology Division, Geophysics division, Geodatadivision, Laboratory division)</div>
+                <li title="Working progress" class="depart_gen row onHover wow fadeInRight delay-02s col-sm-12 pull-left" >
+                  <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
+                  <div class="info">Geological Survey Department (Geology Division, Geophysics division, Geodatadivision, Laboratory division)</div>
                 </li>
-                <li class="depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
-                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
-                  <div class="info">Mines Department ( Licensing and Administration division, Monitoring and Inspection division, Geoscience division )</div>
+                <li title="Working progress" class="depart_gen depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
+                  <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
+                  <div class="info">Mines Department (Licensing and Administration division, Monitoring and Inspection division, Geoscience division)</div>
                 </li>
-                <li class="depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
-                  <div class="icon_div_wrapper"><div class="fa_div"></div></div>
+                <li title="Working progress" class="depart_gen depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
+                 <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
                   <div class="info">Geothermal Resource Department (Geology Division)</div>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
+        </div>         
       </section>  
       <!-- Geoscientific Information Section-->
-      <section id="geoscientific_info" class="m-100 mw-100 section" *ngSwitchCase="'geo'">
+      <section id="geoscientific_info" class="m-100 mw-100 section" *ngSwitchCase="'geo'">     
         <div class="container">
           <div class="category_header wow fadeInDown delay-01s"><h4>Geoscientific Information</h4></div>
           <div class="row services">
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-              <div class="service">
-                <div class="icon-holder">
-                  <fa name="link" size="lg"></fa>
-                </div>
-                <h4 class="heading">Mining Act 2003</h4>
-                <p class="description">An Act to repeal and replace the Mining Act, Cap. 248, with a new legislation on mining and mineral development, which conforms, and otherwise gives effect, to ...</p>
+              <div class="service" title="Download Act">
+                <a href="assets/regulations/Mining_Act.pdf" donwload="Mining Act.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading">Mining Act 2003</h4>
+                  <p class="description">An Act to repeal and replace the Mining Act, Cap. 248, with a new legislation on mining and mineral development, which conforms, and otherwise gives effect, to ...</p>
+                </a>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
-              <div class="service">
-                <div class="icon-holder">
-                  <fa name="link" size="lg"></fa>
-                </div>
-                <h4 class="heading">Mining Regulations</h4>
-                <p class="description">In exercise of the powers conferred upon the Minister by section 121 of the Mining Act, 2003, these Regulations are made this 2nd day of September, 2004.</p>
+              <div class="service" title="Download Act">
+                <a href="assets/regulations/Mining_Regulations_A.pdf" donwload="Mining Regulations.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading">Mining Regulations</h4>
+                  <p class="description">In exercise of the powers conferred upon the Minister by section 121 of the Mining Act, 2003, these Regulations are made this 2nd day of September, 2004.</p>
+                </a>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-              <div class="service">
-                <div class="icon-holder">
-                  <fa name="link" size="lg"></fa>
-                </div>
-                <h4 class="heading">Mineral Policy</h4>
-                <p class="description">The Constitution of the Republic of Uganda places important natural resources including minerals under the protection of Government, on behalf of the people of Uganda.</p>
+              <div class="service" title="Download Act">
+                <a href="assets/regulations/Mineral Policy of Uganda 2002.pdf" donwload="Mineral Policy of Uganda 2002.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading">Mineral Policy</h4>
+                  <p class="description">The Constitution of the Republic of Uganda places important natural resources including minerals under the protection of Government, on behalf of the people of Uganda.</p>
+                </a>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-              <div class="service map_service">
-                <div class="icon-holder">
-                  <fa name="link" size="lg"></fa>
-                </div>
-                <h4 class="heading map_img">Mineral concession and occurrence map</h4>
-                <img class="service-img" title="Download Map" src="assets/images/mineral concessions and occurencies map_thumbnail.png" />
+              <div class="service map_service" title="Download Map">
+                <a href="assets/regulations/Mineral Occurence_Concession Map.pdf" donwload="Mineral Occurence Concession Map.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading map_img">Mineral concession and occurrence map</h4>
+                  <img class="service-img" title="Download Map" src="assets/images/mineral concessions and occurencies map_thumbnail.png" />
+                </a>
               </div>
             </div>
             <!--
@@ -176,28 +184,33 @@
             </div> -->                                     
           </div>
         </div>  
-      </section>
-      <!--
-      <pdf-viewer [src]="pdfSrc" 
-                  [render-text]="true"
-                  style="display: block;"
-                  [render-text]="true"
-                  [external-link-target]="self"
-                  [stick-to-page]="true"
-      ></pdf-viewer>-->                 
+      </section>            
       <!-- Map Section -->
       <section id="map" class="m-100 mw-100 section" *ngSwitchCase="'map'">
-        <div class="container-fluid">
-          <div class="map_heading category_header wow fadeInDown delay-01s"><a href="http://portals.flexicadastre.com/uganda/" target="_blank" title="Visit the link"><h4>Mineral Occurance Map</h4></a></div>
+        <div class="container-fluid">          
+          <!--<div class="map_heading category_header wow fadeInDown delay-01s"><a href="http://portals.flexicadastre.com/uganda/" target="_blank" title="Visit the link"><h4>Mineral Occurance Map</h4></a></div>-->
           <div class="row">
-            <div class="col-lg-12 col-md-12 wow fadeInRight delay-04s actual_map">
-              <div class="embed-responsive embed-responsive-1by1">
+            <div class="col-lg-12 col-md-12 mineral-map-loading-overlay wow fadeIn delay-02s">
+              <div class="sk-cube-grid sk-cube-grid-mm">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+              </div>              
+            </div>
+            <div class="col-lg-12 col-md-12 wow fadeIn delay-04s actual_map">
+              <div class="embed-responsive embed-responsive-1by1 wow fadeIn delay-04s">
                 <iframe 
                   class="embed-responsive-item" 
                   height="600" 
                   frameborder="0" 
                   style="border:0" 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9486.521541803044!2d32.47512708170844!3d0.05523665286863108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d868fc7d6ce29%3A0xf0b754352428061c!2sDirectorate+Of+Geological+Surveys+And+Mines!5e0!3m2!1sen!2s!4v1506767200920"
+                  src="http://portals.flexicadastre.com/uganda/"
                   allowfullscreen>
                 </iframe>
               </div>            
@@ -245,7 +258,19 @@
                   <li class="gplus"><a><fa name="google-plus" title="Follow us on Google plus"></fa></a></li>
                 </ul>                                  
               </div>
-            </div>                          
+            </div>
+            <div class="col-lg-12 col-md-12 wow fadeInRight delay-04s contact_us_map">
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe 
+                  class="embed-responsive-item" 
+                  height="600" 
+                  frameborder="0" 
+                  style="border:0" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9486.521541803044!2d32.47512708170844!3d0.05523665286863108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d868fc7d6ce29%3A0xf0b754352428061c!2sDirectorate+Of+Geological+Surveys+And+Mines!5e0!3m2!1sen!2s!4v1506767200920"
+                  allowfullscreen>
+                </iframe>
+              </div>            
+            </div>                                       
           </div>
         </div>
       </section>               

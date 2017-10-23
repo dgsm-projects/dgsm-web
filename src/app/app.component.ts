@@ -15,13 +15,16 @@ export class AppComponent {
   sidebarOverlayHeight = 0;
   switchValue = "home";
   sectionHeight = $(window).height()-350;
-  pdfSrc: string = 'assets/regulations/MINING_ACT_2003.pdf';
-  pdfUrl: String = "http://docs.google.com/gview?url="+this.pdfSrc+"&embedded=true"
+  pdfSrc: string = 'assets/regulations/Mining_Regulations.pdf';
+  mineralMapOverlay = 0;
+  pdfTitle = 'test';
+  acts = {'miningAct2003':'Mining_Act.pdf','miningRegulations':'Mining_Regulations.pdf','mineralPolicy':'Mineral Policy of Uganda 2002.pdf','mineralCCM':'Mineral Occurence_Concession Map.pdf'}
 
   constructor(private Sanitizer: DomSanitizer){}
 
   ngOnInit(){
     this.sidebarOverlayHeight = $(document).height();
+    $(".mineral-map-loading-overlay").css("height",this.sectionHeight);
     $(".sections_wrapper").css('height',this.sectionHeight);
     //$("#contact").css('height',this.sectionHeight);
     //Set sidebar overlay visibility
@@ -105,6 +108,17 @@ export class AppComponent {
 
   _getEmbededPdf(){
     return this.Sanitizer.bypassSecurityTrustHtml(this.pdfSrc)
+  }
+
+  _downloadAct(act){
+    console.log(act)
+    var keys = Object.keys(this.acts)
+    keys.filter((item) =>{
+      if(item == act){
+        var path = "assets/regulations/"+this.acts[item]
+        this.pdfSrc = path;
+      }
+    })
   }
 
 }

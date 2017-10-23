@@ -74,21 +74,22 @@
   position: absolute;
   height: 100%;
 }
+.dept_icon{
+  position: absolute;
+  height: 100%;
+  margin-top: 18px;
+}
 .fa_div{
   margin-top: 10px;
   margin-left: -29px;
   margin-right: 35px;
-  background-color: transparent;
   text-align: -webkit-center;
   font-weight: lighter;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   opacity: .85;
-  transition-duration: 300ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
   height: 3px;
-  border: 1px solid #fff;
-  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 .last{
   margin-top: 28px;
@@ -118,7 +119,7 @@
     margin-top: -6px;    
   }
   #contact{
-    margin-bottom: 6px;    
+    margin-bottom: 0px;    
   }
 }
 .row.onHover{
@@ -137,6 +138,9 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);  
 }
+.function_ul .onHover:hover .dept_icon{
+  width: 75%;  
+}
 .function_ul .onHover:hover .fa_div{
   margin-left: -1px;
   transition-duration: 300ms;
@@ -148,6 +152,16 @@
 }
 .function_ul .onHover:hover .info{
   margin-left: 40px;
+}
+.depart_gen{
+  cursor: pointer;
+}
+.function_ul .depart_gen:hover .info{
+  margin-left: 0px !important;
+  color: black; 
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;   
 }
 .function_ul .row .info{
   padding: 0px;
@@ -271,6 +285,10 @@
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+.service > a{
+  color: inherit
+}
+
 .map_service:hover{
     height: 100% !important;  
 }
@@ -297,12 +315,20 @@
 }
 
 .service:hover {
-	border-color: #f35757;
+  border-color: #f35757;
+  cursor: pointer;
 }
 
 .service:hover .icon-holder {
   top: -23px !important;
   border-color: #f35757;
+}
+.service:hover  a{
+  color: inherit
+}
+
+.service > a:hover{
+  color: inherit !important;
 }
 
 .service:hover .heading {
@@ -360,20 +386,37 @@
   margin-bottom: -6px;  
 }
 #map > div > .row{
-  height: 87.5%;
+  height: 100%;
   margin: 0px;
 }
 .actual_map{
-  display: -webkit-inline-box;  
   height: 100%;
+}
+.contact_us_map{
+  height: 300px;  
+}
+.actual_map,
+.contact_us_map{
+  display: -webkit-inline-box;  
   padding: 0px;
 }
-
 /* Contact Section */
 #contact{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.91);
+  background: url('../assets/images/world_Map_2.jpg');
   color: white;
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+	-webkit-background-size: cover;
+  background-size: cover;  
+}
+#contact > div{
+  background-color: rgba(0, 0, 0, 0.91);
 }
 #contact > div > .row{
   margin: 0px;
@@ -436,11 +479,22 @@
     z-index: 99999;
     background: #1d1d1d;
 }
+.mineral-map-loading-overlay{
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(52, 58, 64, 0.16);
+  width: 80%;
+  height: 56.8%;
+}
 /*spinner*/
 .sk-cube-grid {
   width: 40px;
   height: 40px;
   margin: 300px auto;
+}
+
+.sk-cube-grid-mm{
+  margin: 221px auto !important;
 }
 
 .sk-cube-grid .sk-cube {
