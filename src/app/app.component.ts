@@ -15,10 +15,7 @@ export class AppComponent {
   sidebarOverlayHeight = 0;
   switchValue = "home";
   sectionHeight = $(window).height()-350;
-  pdfSrc: string = 'assets/regulations/Mining_Regulations.pdf';
   mineralMapOverlay = 0;
-  pdfTitle = 'test';
-  acts = {'miningAct2003':'Mining_Act.pdf','miningRegulations':'Mining_Regulations.pdf','mineralPolicy':'Mineral Policy of Uganda 2002.pdf','mineralCCM':'Mineral Occurence_Concession Map.pdf'}
 
   constructor(private Sanitizer: DomSanitizer){}
 
@@ -30,7 +27,7 @@ export class AppComponent {
     //Set sidebar overlay visibility
     $(".sidebar_overlary").css("display","none").css("height",this.sidebarOverlayHeight);
     // Loading Elements
-    $(".loading-overlay .sk-cube-grid").fadeOut(2000, function () {
+    $(".loading-overlay .sk-cube-grid").fadeOut(3000, function () {
         // Show The Scroll
         $("body").css("overflow", "auto");
         $(this).parent().fadeOut(1000, function () {
@@ -104,21 +101,6 @@ export class AppComponent {
   _navSwitch(activated){
     console.log(activated);
     this.switchValue = activated;
-  }
-
-  _getEmbededPdf(){
-    return this.Sanitizer.bypassSecurityTrustHtml(this.pdfSrc)
-  }
-
-  _downloadAct(act){
-    console.log(act)
-    var keys = Object.keys(this.acts)
-    keys.filter((item) =>{
-      if(item == act){
-        var path = "assets/regulations/"+this.acts[item]
-        this.pdfSrc = path;
-      }
-    })
   }
 
 }

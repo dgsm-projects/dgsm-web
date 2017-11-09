@@ -5,9 +5,8 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
-
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 	text-align:center;
 	background:url(assets/images/bg1.png) left top repeat;
   background-repeat: repeat;
@@ -144,7 +143,8 @@ a{
 .geo_fa{
   margin-right: 5px !important;
 }
-.mineral_map_fa{
+.mineral_map_fa,
+.gallery_fa{
   margin-right: 5px !important;
 }
 .contact_fa{
@@ -216,14 +216,14 @@ a{
 /* Header Styles
 ---------------------------------*/
 #header_overlay{
-  background-color: rgba(52, 58, 64, 0.69);
+  background-color: rgba(52, 58, 64, 0.38);
   width: 100%;
-  box-shadow: 0px -2px 24px 15px rgba(52, 58, 64, 0.71);
+  box-shadow: 0px -2px 24px 15px rgba(52, 58, 64, 0.37);
   padding-right: 40px;
 }
 .header{
 	text-align:center;
-	background:url(assets/images/cove_photo_3.fw.png) left top repeat;
+	background:url(assets/images/cover_photo_1.1.fw.png) left top repeat;
   padding: 0px 0px 0px 0px;
   background-repeat: no-repeat;
   background-position: center top;
@@ -289,7 +289,6 @@ a{
 .start-button li a{
 color: #fff;
 }
-
 
 .link{
 	padding:15px 35px;

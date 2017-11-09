@@ -94,10 +94,12 @@
 .last{
   margin-top: 28px;
 }
-@media(max-width: 993px){
-  #wrapper{
+@media (max-width: 1030px){
+ #wrapper{
     width: 100% !important;
-  }  
+  }
+}
+@media(max-width: 993px){
   .header > div{
     padding: 68px 0px 0px !important;
   }    
@@ -172,23 +174,31 @@
 /* Department Section */
 #departments{
     height: 100%;
+    overflow-y: auto;
 }
 #departments > div{
   /*padding-top: 64px;*/
 }
 #departments > div > .row{
-  padding-top: 0px;
+  padding-top: 28px;
 }
 #departments div .row .card_first_div{
   margin-left: auto;
   margin-right: auto;
+}
+.category_header > h4{
+    display: -webkit-inline-box;
+}
+.divisions{
+  font-size: 15px;
+  margin-top: 8px;
+  margin-left: 5px;  
 }
 .wrap-card {
   position: relative;
   box-shadow: 0px 0px 0px #818181;
   transition: all 0.2s ease 0s;
   -webkit-transform: translateY(0px) translateX(0px);
-  margin-top: 48px;
 }
 .wrap-card:before,
 .wrap-card:after {
@@ -212,23 +222,23 @@
   -webkit-transform-origin: 100% 0;
 }
 .wrap-card:hover {
-  box-shadow: 20px 20px 0px #818181;
+  box-shadow: 10px 10px 0px #343a40;
   -webkit-transform: translateY(-10px) translateX(-10px);
   transition: all 0.2s ease 0.4s;
+  padding-top: 3px;
 }
 .wrap-card:hover:after,
 .wrap-card:hover:before {
   -webkit-transform: scaleX(1);
 }
-.card_custom {
+.card {
   background: #ffffff;
   padding: 30px 35px 45px 35px;
   margin-bottom: 30px;
   border: 1px solid rgba(129, 129, 129, 0.1);
-  height: 435px;
 }
-.card_custom:before,
-.card_custom:after {
+.card:before,
+.card:after {
   display: inline-block;
   position: absolute;
   content: " ";
@@ -237,23 +247,68 @@
   background: #818181;
   -webkit-transform: scaleY(0);
   transition: all 0.2s ease 0.2s;
+  margin-right: -1px;
+  margin-left: -1px;
+  margin-top: -1px;
 }
-.card_custom:before {
+.card:before {
   top: 0;
   left: 0;
   -webkit-transform-origin: 0 100%;
 }
-.card_custom:after {
+.card:after {
   top: 0;
   right: 0;
   -webkit-transform-origin: 0 0;
 }
-.card_custom:hover:after,
-.card_custom:hover:before {
+.card:hover:after,
+.card:hover:before {
   -webkit-transform: scaleY(1);
 }
-.text-detail{
-  padding: 20px 20px 0px 20px;    
+.text-detail {
+  margin-top: 18px;
+  color: #5f5f5f;
+}
+.text-detail > ul{
+  padding: 0px;
+}
+.text-detail > ul > li{
+  list-style: none;
+  text-align: -webkit-left;  
+  padding: 10px 0px;
+}
+.text-detail > ul > li:hover{
+  cursor: pointer;
+}
+.icon_div{
+  margin-right: 16px;
+}
+.division_icon{
+  width: 50px;
+}
+.icon_div,
+.division_name_div{
+    display: -webkit-inline-box;  
+}
+.division_name_div{
+    width: 50%;
+}
+.lng{
+  position: absolute;
+}
+.listing-item{
+  list-style: none;
+  display: -webkit-inline-box;
+  width: 100%;
+  padding: 0;
+  margin-top: 38px;
+}
+.dep {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 20px;  
 }
 
 /* Geoscientific Section */
@@ -261,9 +316,13 @@
     height: 100%;
     overflow-y: auto;    
 }
-
 #geoscientific_info > div {
     height: 100%;   
+}
+.superscript{
+  position: absolute;
+  font-size: 9px;
+  margin-top: -1px;    
 }
 .geo_first{
   margin-left: auto;
@@ -289,9 +348,6 @@
   color: inherit
 }
 
-.map_service:hover{
-    height: 100% !important;  
-}
 .service .icon-holder {
   position: relative;
   top: 40px;
@@ -354,7 +410,8 @@
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	-webkit-transform: scale(0);
 	-ms-transform: scale(0);
-	transform: scale(0);
+  transform: scale(0);
+  height: 124px;  
 }
 
 .service:hover .description,
@@ -404,7 +461,7 @@
 #contact{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.91);
-  background: url('../assets/images/world_Map_2.jpg');
+  background: url('../assets/images/world_Map_2-min.jpg');
   color: white;
   overflow-y: auto; 
   overflow-x: hidden; 
@@ -573,9 +630,14 @@
 footer {
   color: white;
   height: 100%;
+	background:url(../assets/images/world_Map_footer.jpg) left top repeat;
+  padding: 0px 0px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;  
 }
 footer > .cover{
-  background-color: rgba(0, 0, 0, 0.61);  
+  background-color: rgba(0, 0, 0, 0.91);  
   padding: 0px 0px 0px 0px;
 }
 

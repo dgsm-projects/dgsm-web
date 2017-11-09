@@ -17,7 +17,10 @@
             </li>
             <li>
                 <a href="#map" (click)="_navSwitch('map')"><fa class="sidebar_fa mineral_map_fa" name="street-view"></fa><span class="sidebar_labels">Mineral Maps</span></a>
-            </li>                  
+            </li>   
+            <li>
+                <a href="#gallery"><fa class="sidebar_fa gallery_fa" name="street-view"></fa><span class="sidebar_labels">Gallery</span></a>
+            </li>                                
             <li>
                 <a href="#contactUs" (click)="_navSwitch('contact')"><fa class="sidebar_fa contact_fa" name="volume-control-phone"></fa><span class="sidebar_labels">Contact us</span></a>
             </li>
@@ -46,6 +49,7 @@
           <!--<li class="small-logo" class="logo_btn"><a href="#header"><img class="small_logo" src="assets/images/logo_2.jpg" alt=""></a></li>-->
           <li><a href="#geoscientific_info" class="geo_btn" (click)="_navSwitch('geo')">Geoscientific Information</a></li>
           <li><a href="#map" class="map_btn" (click)="_navSwitch('map')">Mineral Maps</a></li>
+          <li><a href="#gallery" class="gallery_btn">Gallery</a></li>
           <li><a href="#contactUs" class="contact_btn" (click)="_navSwitch('contact')">Contact</a></li>
         </ul>            
         <a class="res-nav_click pull-left" (click)="_menuToggle($event)"><fa name="bars"></fa></a>
@@ -102,27 +106,188 @@
       <!-- Departments Section -->
       <section id="departments" class="m-100 mw-100 section" *ngSwitchCase="'departments'">        
         <div class="container-fluid">
-          <div class="category_header wow fadeInDown delay-01s"><h4>Departments</h4></div>
+          <div class="category_header"><h4><div class="wow fadeInDown delay-01s">Departments  -</div> <div class="divisions wow fadeInUp delay-02s">Divisions</div></h4></div>
           <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="wrap-card">
+                <div class="card">
+                  <h2 class="dep wow fadeInUp delay-02s">
+                    Geological Survey
+                  </h2>
+                  <div class="text-detail">
+                    <ul>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geology_nucleus.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geology</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geophysics_surveying-services-icon.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geophysics</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geodata_2.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geodata</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/laboratory_2.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Laboratory</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>   
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="wrap-card">
+                <div class="card">
+                  <h2 class="dep wow fadeInUp delay-02s">
+                    Mines
+                  </h2>
+                  <div class="text-detail">
+                    <ul>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/licensing_2.gif" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s lng">Licensing and Administration</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/inspection.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s lng">Monitoring and Inspection</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geoscience.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geoscience</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="wrap-card">
+                <div class="card">
+                  <h2 class="dep wow fadeInUp delay-02s">
+                    Geothermal Resource
+                  </h2>
+                  <div class="text-detail">
+                    <ul>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geology_nucleus.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geology</div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geophysics_surveying-services-icon.png" /></div>
+                        <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geophysics</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <!--                              
+            <ul class="function_ul"><!-- listing-item  --
+              <li class="">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="wrap-card">
+                    <div class="card">
+                      <h2 class="dep wow fadeInUp delay-02s">
+                        Geological Survey
+                      </h2>
+                      <div class="text-detail">
+                        <ul>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geology_nucleus.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geology</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geophysics_surveying-services-icon.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geophysics</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geodata_2.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geodata</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/laboratory_2.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Laboratory</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="wrap-card">
+                    <div class="card">
+                      <h2 class="dep wow fadeInUp delay-02s">
+                        Mines
+                      </h2>
+                      <div class="text-detail">
+                        <ul>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/licensing_2.gif" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s lng">Licensing and Administration</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/inspection.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s lng">Monitoring and Inspection</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geoscience.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geoscience</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="wrap-card">
+                    <div class="card">
+                      <h2 class="dep wow fadeInUp delay-02s">
+                        Geothermal Resource
+                      </h2>
+                      <div class="text-detail">
+                        <ul>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geology_nucleus.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geology</div>
+                          </li>
+                          <li>
+                            <div class="col-xs-4 icon_div wow fadeInLeft delay-02s"><img class="division_icon" src="../assets/images/icons/geophysics_surveying-services-icon.png" /></div>
+                            <div class="col-xs-8 division_name_div wow fadeInRight delay-02s">Geophysics</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>                    
+            </ul>  
+            <!--             
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 function_first">
+              <!--
               <ul class="function_ul">
                 <li title="Working progress" class="depart_gen row onHover wow fadeInRight delay-02s col-sm-12 pull-left" >
-                  <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
-                  <div class="info">Geological Survey Department (Geology Division, Geophysics division, Geodatadivision, Laboratory division)</div>
+                  <!--<div class="dept_icon"><div class="fa_div"></div></div>--
+                  <div class="info">Geological Survey Department (Geology division, Geophysics division, Geodata Division, Laboratory Division)</div>
                 </li>
                 <li title="Working progress" class="depart_gen depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
-                  <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
+                  <!--<div class="dept_icon"><div class="fa_div"></div></div>--
                   <div class="info">Mines Department (Licensing and Administration division, Monitoring and Inspection division, Geoscience division)</div>
                 </li>
                 <li title="Working progress" class="depart_gen depart_li row onHover wow fadeInRight delay-02s col-sm-12 pull-left">
-                 <!--<div class="dept_icon"><div class="fa_div"></div></div>-->
-                  <div class="info">Geothermal Resource Department (Geology Division)</div>
+                 <!--<div class="dept_icon"><div class="fa_div"></div></div>--
+                  <div class="info">Geothermal Resource Department (Geology division, Geophysics Division)</div>
                 </li>
-              </ul>
-            </div>
+              </ul>--           
+            </div>-->
           </div>
-        </div>         
-      </section>  
+        </div>  
+      </section>
       <!-- Geoscientific Information Section-->
       <section id="geoscientific_info" class="m-100 mw-100 section" *ngSwitchCase="'geo'">     
         <div class="container">
@@ -162,16 +327,49 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-              <div class="service map_service" title="Download Map">
+              <div class="service map_service" title="Download pdf Map">
                 <a href="assets/regulations/Mineral Occurence_Concession Map.pdf" target="blank" donwload="Mineral Occurence Concession Map.pdf">
                   <div class="icon-holder">
                     <fa name="cloud-download" size="lg"></fa>
                   </div>
-                  <h4 class="heading map_img">Mineral concession and occurrence map</h4>
-                  <img class="service-img" title="Download Map" src="assets/images/mineral concessions and occurencies map_thumbnail.png" />
+                  <h4 class="heading map_img">Mineral Concession and Occurrence Map</h4>
+                  <img class="service-img" title="Download pdf Map" src="assets/images/mineral concessions and occurencies map_thumbnail.png" />
                 </a>
               </div>
             </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
+              <div class="service map_service" title="Download pdf Map">
+                <a href="assets/regulations/Mineral Occurence Map.pdf" target="blank" donwload="Mineral Occurence Map.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading map_img">Mineral Occurence Map</h4>
+                  <img class="service-img" title="Download pdf Map" src="assets/images/Mineral Occurence Map.png" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInRight delay-04s">
+              <div class="service" title="Download A copy">
+                <a href="assets/regulations/How to obtain a mining license.pdf" target="blank" donwload="How To Obtain A Mining License.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading">How To Obtain A Mining License</h4>
+                  <p class="description">Firstly, to start any business in mining other than buying and selling, one has to obtain a Prospecting License. After prospecting, one can apply for:</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="service" title="Download A copy">
+                <a href="assets/regulations/How to obtain a mineral trading license.pdf" target="blank" donwload="How to obtain a mineral trading license.pdf">
+                  <div class="icon-holder">
+                    <fa name="cloud-download" size="lg"></fa>
+                  </div>
+                  <h4 class="heading">How To Obtain A Mineral Trading License</h4>
+                  <p class="description">When a Mineral Dealers' License (MDL) has been granted, expiration is on the 31<span class="superscript">st</span> of December of the year of issue. Here are the Fees and Types of MDLs:</p>
+                </a>
+              </div>
+            </div>                               
             <!--
             <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn delay-04s">
               <div class="service">
